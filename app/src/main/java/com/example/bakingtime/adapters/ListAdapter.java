@@ -46,6 +46,8 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder
         String itemName;
         if (i == 0) {
             itemName = context.getString(R.string.ingredients);
+        } else if (i == 1) {
+            itemName = context.getString(R.string.recipe_introduction);
         } else itemName = context.getString(R.string.step) + (i - 1);
         holder.itemNameTextView.setText(itemName);
     }

@@ -123,6 +123,7 @@ public class ListActivity extends AppCompatActivity implements ListFragment.OnFr
         } else {
             Intent intent = new Intent(this, DetailActivity.class);
             intent.putExtra(SELECTED_LIST_POSITION, position);
+            intent.putExtra(MainActivity.SELECTED_RECIPE_NAME, selectedRecipeName);
             intent.putParcelableArrayListExtra(STEP_LIST, (ArrayList<? extends Parcelable>) steps);
             intent.putParcelableArrayListExtra(INGREDIENT_LIST, (ArrayList<? extends Parcelable>) ingredients);
             startActivity(intent);

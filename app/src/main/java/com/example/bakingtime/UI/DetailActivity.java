@@ -18,6 +18,7 @@ public class DetailActivity extends AppCompatActivity {
 
 
     int selectedListPosition;
+    String selectedRecipeName;
     List<Ingredient> ingredients;
     List<Step> steps;
 
@@ -29,11 +30,12 @@ public class DetailActivity extends AppCompatActivity {
         Intent intent = getIntent();
         if (intent != null) {
             selectedListPosition = intent.getIntExtra(ListActivity.SELECTED_LIST_POSITION, 0);
+            selectedRecipeName = intent.getStringExtra(MainActivity.SELECTED_RECIPE_NAME);
             ingredients = intent.getParcelableArrayListExtra(ListActivity.INGREDIENT_LIST);
             steps = intent.getParcelableArrayListExtra(ListActivity.STEP_LIST);
         }
 
-        setTitle(R.string.recipe_detail);
+        setTitle(selectedRecipeName);
 
         // Find the view pager that will allow the user to swipe between fragments
         ViewPager viewPager = findViewById(R.id.viewPager);
