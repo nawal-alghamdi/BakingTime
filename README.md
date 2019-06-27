@@ -1,5 +1,7 @@
 # BakingTime
-This BakingTime project is part of Android Developer Nanodegree by Google &amp; Udacity
+This BakingTime project is part of Android Developer Nanodegree by Google &amp; Udacity. 
+
+The app is showing list of recipes provided by (Udacity’s resident baker-in-chief, Miriam). And it allow a user to select a recipe and see recipe's ingredients and video-guided steps for how to complete it.
 
 ## What the project uses
 * [ExoPlayer](https://exoplayer.dev)
